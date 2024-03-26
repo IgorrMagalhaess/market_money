@@ -106,4 +106,19 @@ describe "Markets API" do
       expect(data[:errors]).to be_a(Array)
       expect(data[:errors].first[:detail]).to eq("Couldn't find Market with 'id'=123123123123")
    end
+
+   it 'will send all vendors for a specific market' do
+      market = create(:market)
+      vendor_1 = create(:vendor)
+      vendor_2 = create(:vendor)
+
+      market_vendor_1 = MarketVendor.create(market_id: market.id, vendor_id: vendor_1.id)
+      market_vendor_2 = MarketVendor.create(market_id: market.id, vendor_id: vendor_2.id)
+
+      get "/api/v0/markets/#{market.id}/vendors"
+
+      response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to be_successful
+   end
 end
