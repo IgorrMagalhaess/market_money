@@ -147,4 +147,16 @@ describe "Markets API" do
       expect(vendor[:attributes]).to have_key(:credit_accepted)
       expect(vendor[:attributes][:credit_accepted]).to be_in([true, false])
    end
+
+   it 'can create a new market vendor' do
+      market = create(:market)
+      vendor = create(:vendor)
+
+      post "/api/v0/market_vendors", params: { market_it: market.id, vendor_id: vendor.id } 
+
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to be_successful
+      
+   end
 end
