@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       resources :markets, only: [:index, :show] do
         resources :vendors, only: [:index]
       end
+
+      resources :market_vendors, only: [:create]
     end
   end
 end
