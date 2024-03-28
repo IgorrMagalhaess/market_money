@@ -3,6 +3,7 @@ class Api::V0::MarketVendorsController < ApplicationController
    before_action :find_market_vendor, only: [:destroy]
 
    def create
+      # try create with a bang
       market_vendor = MarketVendor.new(market_id: @market.id, vendor_id: @vendor.id)
 
       if market_vendor.save
