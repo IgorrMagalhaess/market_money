@@ -14,6 +14,7 @@ class ErrorSerializer
    end
 
    def serialize_json_market_vendor
+      # try to refactor to use only one method
       error_message = "Validation Failed: Vendor must exist!"
 
       if @error_object.message.include?("Market")
