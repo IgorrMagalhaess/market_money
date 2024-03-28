@@ -11,8 +11,8 @@ describe 'Vendor API' do
     expect(response).to be_successful
     vendor = vendor_response[:data]
 
-    check_hash_structure(vendor, :id, String)
-
+    expect(vendor).to have_key(:id)
+    expect(vendor[:id]).to be_a(String)
 
     expect(vendor).to have_key(:type)
     expect(vendor[:type]).to be_a(String)
