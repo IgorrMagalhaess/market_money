@@ -55,7 +55,7 @@ describe "Markets API" do
       market_response = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
-
+      
       market = market_response[:data]
 
       expect(market).to have_key(:id)
