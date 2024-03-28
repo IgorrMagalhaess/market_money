@@ -62,7 +62,7 @@ describe "Market Vendor API" do
    it 'can delete a vendor from a market' do
       market = create(:market)
       vendor = create(:vendor)
-      market_vendor = create(:market_vendor, vendor_id: vendor.id, market_id: market.id)
+      market_vendor = create(:market_vendor, "vendor_id": vendor.id, "market_id": market.id)
 
       delete "/api/v0/market_vendors", 
          headers: { 'Content-Type' => 'application/json' , 'Accept' => 'application/json' }, 

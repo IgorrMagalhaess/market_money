@@ -6,8 +6,8 @@ class Api::V0::VendorsController < ApplicationController
    end
 
    def show 
-     vendor = Vendor.find(params[:id]) 
-     render json: VendorSerializer.new(vendor)
+      vendor = Vendor.find(params[:id]) 
+      render json: VendorSerializer.new(vendor)
    end
 
    def create
@@ -21,16 +21,21 @@ class Api::V0::VendorsController < ApplicationController
    end
 
    def update 
-     vendor = Vendor.find(params[:id]) 
-     vendor.update!(vendor_params)
+      vendor = Vendor.find(params[:id]) 
+      vendor.update!(vendor_params)
 
-     render json: VendorSerializer.new(vendor), status: 200
+      render json: VendorSerializer.new(vendor), status: 200
    end
 
    def destroy 
-     vendor = Vendor.find(params[:id]) 
-      #   vendor.delete(vendor.id)
+      vendor = Vendor.find(params[:id]) 
       vendor.destroy
-     render json: VendorSerializer.new(vendor), status: 204
+      render json: VendorSerializer.new(vendor), status: 204
+   end
+
+   private
+
+   def vendor_params
+      params.require(:vendor).permit(:name, :description, :contact_name, :contact_phone, :credit_accepted )
    end
 end

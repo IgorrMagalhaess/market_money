@@ -1,13 +1,12 @@
 class Api::V0::MarketVendorsController < ApplicationController
-   rescue_from ActiveRecord::RecordNotFound, with: :not_found_response
-   before_action :find_market_and_vendor, only: [:create, :destroy]
+   before_action :find_market_and_vendor, only: [:create]
    before_action :find_market_vendor, only: [:destroy]
 
    def create
       market_vendor = MarketVendor.new(market_id: @market.id, vendor_id: @vendor.id)
 
       if market_vendor.save
-         render json: { message: "Successfully added vendor to market" }, status: :created
+         created_message_response("Successfully added vendor to market")
       else
          render_error_already_exists_response(market_vendor.errors)
       end
@@ -15,7 +14,7 @@ class Api::V0::MarketVendorsController < ApplicationController
 
    def destroy
       @market_vendor.destroy
-      head :no_content
+      head :no_content, status: :no_content 
    end
 
    private
@@ -37,6 +36,17 @@ class Api::V0::MarketVendorsController < ApplicationController
    end
 
    def find_market_vendor
-      @market_vendor = MarketVendor.find_by(market_id: params[:market_id], vendor_id: params[:vendor_id])
+      market_vendor = MarketVendor.where(market_id: params[:market_id], vendor_id: params[:vendor_id])
+      @market_vendor = market_vendor.first
+
+      unless @market_vendor
+         message = "No MarketVendor with market_id=#{params[:market_id]} AND vendor_id=#{params[:vendor_id]} exists"
+         render json: ErrorSerializer.new(ErrorMessage.new(message, 404))
+            .serialize_json, status: :not_found
+      end
+   end
+
+   def created_message_response(message)
+      render json: { message: message }, status: :created
    end
 end
