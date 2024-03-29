@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get "/markets/search", to: "searchs#index" 
 
       resources :markets, only: [:index, :show] do
+        resources :nearest_atms, only: [:index]
         resources :vendors, only: [:index]
       end
 
