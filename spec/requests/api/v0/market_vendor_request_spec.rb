@@ -70,6 +70,7 @@ describe "Market Vendor API" do
 
       expect(response).to be_successful
       expect(response.status).to eq(204)
+   
    end
 
    describe 'errors' do
