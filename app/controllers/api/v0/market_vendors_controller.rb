@@ -36,7 +36,8 @@ class Api::V0::MarketVendorsController < ApplicationController
    end
 
    def find_market_vendor
-      @market_vendor = MarketVendor.find_by(market_id: params[:market_id], vendor_id: params[:vendor_id])
+      market_vendor = MarketVendor.where(market_id: params[:market_id], vendor_id: params[:vendor_id])
+      @market_vendor = market_vendor.first
 
       unless @market_vendor
          message = "No MarketVendor with market_id=#{params[:market_id]} AND vendor_id=#{params[:vendor_id]} exists"

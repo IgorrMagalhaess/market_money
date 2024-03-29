@@ -2,7 +2,6 @@ class AtmFacade
   attr_reader :atms
 
   def initialize(lat,lon, service = AtmService.new) 
-    # require 'pry'; binding.pry
     @lat = lat 
     @lon = lon
     @service = service

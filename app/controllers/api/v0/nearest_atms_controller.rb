@@ -3,8 +3,6 @@ class Api::V0::NearestAtmsController < ApplicationController
     market = Market.find(params[:market_id])
     facade = AtmFacade.new(market.lat, market.lon )
     atms = facade.near_atms
-    # require 'pry'; binding.pry
     render json: AtmSerializer.new(atms)
   end
-
 end
