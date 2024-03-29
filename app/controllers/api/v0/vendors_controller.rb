@@ -13,7 +13,6 @@ class Api::V0::VendorsController < ApplicationController
    def create
       begin
          vendor = Vendor.create!(vendor_params)
-         
          render json: VendorSerializer.new(vendor), status: :created 
       rescue ActiveRecord::RecordInvalid => error
          render json: ErrorSerializer.new(ErrorMessage.new(error.message, 400)).serialize_json, status: 400
@@ -23,7 +22,6 @@ class Api::V0::VendorsController < ApplicationController
    def update 
       vendor = Vendor.find(params[:id]) 
       vendor.update!(vendor_params)
-
       render json: VendorSerializer.new(vendor), status: 200
    end
 
