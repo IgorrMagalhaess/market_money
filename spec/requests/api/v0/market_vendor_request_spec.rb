@@ -86,5 +86,18 @@ describe "Market Vendor API" do
          expect(response).to_not be_successful
          expect(response.status).to eq(404)
       end
+
+      it 'will throw an error if the market does not exist' do
+         market = create(:market)
+         vendor = create(:vendor)
+         market_vendor = create(:market_vendor, vendor_id: vendor.id, market_id: market.id)
+
+         delete "/api/v0/market_vendors", 
+            headers: { 'Content-Type' => 'application/json' , 'Accept' => 'application/json' }, 
+            params: { "vendor_id": vendor.id, "market_id": 9999999}.to_json
+
+         expect(response).to_not be_successful
+         expect(response.status).to eq(404)
+      end
    end
 end
