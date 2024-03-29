@@ -14,29 +14,10 @@ class ErrorSerializer
    end
 
    def serialize_json_market_vendor
-      # try to refactor to use only one method
-      error_message = "Validation Failed: Vendor must exist!"
-
-      if @error_object.message.include?("Market")
-         error_message = "Validation Failed: Market must exist!"
-      elsif @error_object.message.include?("Vendor")
-         error_message = "Validation Failed: Vendor must exist!"
-      end
-
       {
-         errors: [
+         errors: [   
             {
-               detail: error_message
-            }
-         ]
-      }
-   end
-
-   def serialize_json_already_exits
-      {
-         errors: [
-            {
-               detail: @error_object.message.first
+               detail: @error_object.market_vendor_error_message
             }
          ]
       }

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/martinchavez/mod3/projects/market_money/app/models/market.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/models/market.rb": {
         "lines": [
           1,
           1,
@@ -36,14 +36,14 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/models/application_record.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/spec/models/market_vendor_spec.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/spec/models/market_vendor_spec.rb": {
         "lines": [
           1,
           null,
@@ -53,7 +53,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/models/market_vendor.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/models/market_vendor.rb": {
         "lines": [
           1,
           1,
@@ -67,7 +67,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/spec/models/vendor_spec.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/spec/models/vendor_spec.rb": {
         "lines": [
           1,
           null,
@@ -79,7 +79,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/models/vendor.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/models/vendor.rb": {
         "lines": [
           1,
           1,
@@ -93,7 +93,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/spec/requests/api/v0/market_request_spec.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/spec/requests/api/v0/market_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -247,7 +247,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/spec/requests/api/v0/market_vendor_request_spec.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/spec/requests/api/v0/market_vendor_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -340,7 +340,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/spec/requests/api/v0/search_request_spec.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/spec/requests/api/v0/search_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -526,7 +526,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/spec/requests/api/v0/vendor_request_spec.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/spec/requests/api/v0/vendor_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -699,7 +699,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/controllers/api/v0/markets_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/controllers/api/v0/markets_controller.rb": {
         "lines": [
           1,
           1,
@@ -722,7 +722,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/controllers/application_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -744,7 +744,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/serializers/market_serializer.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/serializers/market_serializer.rb": {
         "lines": [
           1,
           1,
@@ -754,7 +754,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/serializers/vendor_serializer.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/serializers/vendor_serializer.rb": {
         "lines": [
           1,
           1,
@@ -764,7 +764,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/serializers/error_serializer.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/serializers/error_serializer.rb": {
         "lines": [
           1,
           1,
@@ -773,7 +773,7 @@
           null,
           1,
           null,
-          9,
+          10,
           null,
           null,
           null,
@@ -785,25 +785,6 @@
           null,
           2,
           null,
-          2,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
           null,
           null,
           null,
@@ -812,7 +793,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/poros/error_message.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/poros/error_message.rb": {
         "lines": [
           1,
           1,
@@ -821,10 +802,18 @@
           12,
           12,
           null,
+          null,
+          1,
+          2,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/controllers/api/v0/vendors_controller.rb": {
         "lines": [
           1,
           1,
@@ -869,14 +858,13 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/controllers/api/v0/market_vendors_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/controllers/api/v0/market_vendors_controller.rb": {
         "lines": [
           1,
           1,
           1,
           null,
           1,
-          null,
           2,
           null,
           2,
@@ -911,7 +899,6 @@
           null,
           1,
           2,
-          2,
           null,
           2,
           1,
@@ -926,7 +913,7 @@
           null
         ]
       },
-      "/Users/martinchavez/mod3/projects/market_money/app/controllers/api/v0/searchs_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/market_money/app/controllers/api/v0/searchs_controller.rb": {
         "lines": [
           1,
           1,
@@ -965,6 +952,6 @@
         ]
       }
     },
-    "timestamp": 1711655457
+    "timestamp": 1711718152
   }
 }
