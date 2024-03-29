@@ -6,8 +6,6 @@ RSpec.describe Market do
       it { should have_many(:vendors).through(:market_vendors) }
    end
 
-   
-
    describe "Instance methods" do
       it '#vendor_count' do
          market = create(:market)

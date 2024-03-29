@@ -14,19 +14,14 @@ RSpec.describe AtmFacade do
       
       facade = AtmFacade.new(37.586297, -79.051824)
 
-      # Call near_atms method
       atms = facade.near_atms
-      # require 'pry'; binding.pry
-      
-      # Assertions
+
       expect(atms).to be_an(Array)
       expect(atms.first).to be_an_instance_of(Atm)
       expect(atms.first.lat).to be_a Float
       expect(atms.first.lon).to be_a Float
       expect(atms.first.name).to be_a String
       expect(atms.first.address).to be_a String
-
-      # require 'pry'; binding.pry
     end
   end 
 end
