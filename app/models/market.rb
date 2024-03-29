@@ -28,4 +28,5 @@ class Market < ApplicationRecord
    def self.find_by_state(state)
       Market.where("state ILIKE ?", "%#{state}%")
    end
+
 end
