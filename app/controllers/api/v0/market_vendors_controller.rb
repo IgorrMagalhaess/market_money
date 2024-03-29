@@ -3,7 +3,6 @@ class Api::V0::MarketVendorsController < ApplicationController
    before_action :find_market_vendor, only: [:destroy]
 
    def create
-      # try create with a bang
       market_vendor = MarketVendor.new(market_id: @market.id, vendor_id: @vendor.id)
 
       if market_vendor.save
@@ -31,14 +30,13 @@ class Api::V0::MarketVendorsController < ApplicationController
    end
 
    def render_error_already_exists_response(exception)
-      message = exception.full_messages
+      message = exception.full_messages.first
       render json: ErrorSerializer.new(ErrorMessage.new(message, 422))
-            .serialize_json_already_exits, status: :unprocessable_entity
+            .serialize_json, status: :unprocessable_entity
    end
 
    def find_market_vendor
-      market_vendor = MarketVendor.where(market_id: params[:market_id], vendor_id: params[:vendor_id])
-      @market_vendor = market_vendor.first
+      @market_vendor = MarketVendor.find_by(market_id: params[:market_id], vendor_id: params[:vendor_id])
 
       unless @market_vendor
          message = "No MarketVendor with market_id=#{params[:market_id]} AND vendor_id=#{params[:vendor_id]} exists"
